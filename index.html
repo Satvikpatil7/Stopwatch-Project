@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Smoother Animations: requestAnimationFrame makes animations look smoother because it syncs with 
+     the screen’s refresh rate, usually 60 times per second. This means the animation updates happen at 
+     the best possible time for your display.
+     Better Performance: It uses less CPU power because it automatically pauses when the user switches tabs 
+     or minimizes the browser. This helps save resources and keeps the computer running smoothly.
+     Easier to Control: With requestAnimationFrame, you can easily control the timing of your animations 
+     without worrying about delays that can happen with setInterval. -->
+    <div class="container request-animation" id="container-raf">
+        <h1>requestAnimationFrame</h1>
+        <div class="time">
+            <div>
+                <div class="label">hr</div>
+                <div class="hours" id="hours-raf">00</div>
+            </div>
+            <div>
+                <div class="label">min</div>
+                <div class="minutes" id="minutes-raf">00</div>
+            </div>
+            <div>
+                <div class="label">sec</div>
+                <div class="seconds" id="seconds-raf">00</div>
+            </div>
+            <div>
+                <div class="label">ms</div>
+                <div class="milliseconds" id="milliseconds-raf">00</div>
+            </div>
+        </div>
+        <div class="buttons" id="buttons-raf">
+            <button class="start-raf" id="start-raf">Start</button>
+            <button class="stop-raf" id="stop-raf">Stop</button>
+            <button class="reset-raf" id="reset-raf">Reset</button>
+        </div>
+    </div>
+
+    <div class="container set-interval" id="container-interval">
+        <h1>setInterval</h1>
+        <div class="time">
+            <div>
+                <div class="label">hr</div>
+                <div class="hours" id="hours-interval">00</div>
+            </div>
+            <div>
+                <div class="label">min</div>
+                <div class="minutes" id="minutes-interval">00</div>
+            </div>
+            <div>
+                <div class="label">sec</div>
+                <div class="seconds" id="seconds-interval">00</div>
+            </div>
+            <div>
+                <div class="label">ms</div>
+                <div class="milliseconds" id="milliseconds-interval">00</div>
+            </div>
+        </div>
+        <div class="buttons" id="buttons-interval">
+            <button class="start-interval" id="start-interval">Start</button>
+            <button class="stop-interval" id="stop-interval">Stop</button>
+            <button class="reset-interval" id="reset-interval">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
