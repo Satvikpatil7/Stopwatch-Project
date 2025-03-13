@@ -23,9 +23,5 @@ This project demonstrates two different approaches to implementing a stopwatch i
 ## Conclusion
 Use `setInterval()` for simple time-based tasks. Use `requestAnimationFrame()` for smoother animations and optimized performance.
 
-## Author
-- **Your Name** (Replace with your actual name)
 
-## License
-MIT License
 
