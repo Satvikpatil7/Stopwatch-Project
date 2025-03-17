@@ -12,7 +12,7 @@ let msecele = document.getElementById("milliseconds-interval");
 
 // 00
 function updateDisplay() {
-   hrele.innerText = hr.toString().padStart(2, '0');//string.padStart(length, string)
+   hrele.innerText = hr.toString().padStart(2, '0'); //string.padStart(length, string)
     minele.innerText = min.toString().padStart(2, '0');
     secele.innerText = sec.toString().padStart(2, '0');
     msecele.innerText = ms.toString().padStart(3, '0');
@@ -157,6 +157,7 @@ const stopRA = () => {
 const resetRA = () => {
     runningra = false; //  flag to false
     hrra = minra = secra = msra = 0; // Reset
+    cancelAnimationFrame(requestAnimationFrameId);
     requestAnimationFrameId = undefined; // Reset the ID to indicate no active animation frame
     updateDisplayRA(); // Update 
     console.log("RequestAnimationFrame Stopwatch reset"); 
